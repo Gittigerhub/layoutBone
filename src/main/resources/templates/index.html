@@ -17,7 +17,18 @@
 <body>
     <!-- 기존에 head와 layouts에 basiclayout.html의 head가 결합 -->
     <div layout:fragment="content">
-        이곳에서 작업 내용을 작성
+
+        <p>가위바위보 결과</p>
+        <p th:text="${win}"></p>
+        <hr>
+        <p>계산기 결과</p>
+        <p>
+            <span th:text="${num1}"></span>
+            <span th:text="${oper}"></span>
+            <span th:text="${num2}"></span>=
+            <span th:text="${result}"></span>
+        </p>
+        <hr>
         <script>
             // 스크립트 작성
         </script>
@@ -28,3 +39,12 @@
     </script>
 </body>
 </html>
+
+<!--
+작업순서
+1. 템플릿을 인터넷을 통해 주제에 맞는 것으로 다운로드
+2. 템플릿에 있는 index.html파일을 layout.html에 복사
+3. 각 영역을 나누어서 fragments내에 복사(공통영역)
+4. index.html에 본문 내용을 복사 ==> 확인
+5. index.html에 본문을 제거하고 각 작업파일로 복사해서 사용
+-->
